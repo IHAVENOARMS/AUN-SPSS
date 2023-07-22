@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2017                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 4/4/17 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="BAYES INDEPENDENT" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="MISSING " EqualsSign="None">
+        <Parameter Name="SCOPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="ANALYSIS"/>
+            <EnumValue Name="LISTWISE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="CRITERIA " EqualsSign="None">
+        <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="TOL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXITER" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="INFERENCE" EqualsSign="None">
+        <Parameter Name="VARIABLES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="GROUP" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="SELECT" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="LEVEL"/>
+            <EnumValue Name="MIDPOINT"/>
+            <EnumValue Name="CUTPOINT"/>
+        </Parameter>
+        <Parameter Name="ANALYSIS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="POSTERIOR"/>
+            <EnumValue Name="BAYESFACTOR"/>
+            <EnumValue Name="BOTH"/>
+        </Parameter>
+        <Parameter Name="DATAVAR" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="ESTBF" EqualsSign="None">
+        <Parameter Name="COMPUTATION" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="ROUDER"/>
+            <EnumValue Name="GONEN"/>
+            <EnumValue Name="HYPER"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PRIOR" EqualsSign="None">
+        <Parameter Name="EQUALDATAVAR" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+        <Parameter Name="VARDIST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="DIFFUSE"/>
+            <EnumValue Name="JEFFREYS"/>
+            <EnumValue Name="INVCHISQ"/>
+        </Parameter>
+        <Parameter Name="MEANDIST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="DIFFUSE"/>
+            <EnumValue Name="NORMAL"/>
+        </Parameter>
+    </Subcommand>
+</Command>

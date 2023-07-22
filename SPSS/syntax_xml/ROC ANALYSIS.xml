@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2019                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 8/15/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+ xmlns:p1="http://xml.spss.com/spss/extension"
+ Name="ROC ANALYSIS"
+ Language="Syntax"
+ EndRequired="None"
+ IsArbitrary="No">
+    <Subcommand Name="GLOBAL_PARAMS">
+        <Parameter Name="BY" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="MISSING" EqualsSign="None">
+        <Parameter Name="USERMISSING" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="EXCLUDE"/>
+            <EnumValue Name="INCLUDE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="CRITERIA" EqualsSign="None">
+        <Parameter Name="CUTOFF" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="INCLUDE"/>
+            <EnumValue Name="EXCLUDE"/>
+        </Parameter>
+        <Parameter Name="TESTPOS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="LARGE"/>
+            <EnumValue Name="SMALL"/>
+        </Parameter>
+        <Parameter Name="CI" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="DISTRIBUTION" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FREE"/>
+            <EnumValue Name="NEGEXPO"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="DESIGN" EqualsSign="None">
+        <Parameter Name="PAIR" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+        <Parameter Name="GROUP" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="SELECT" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="LEVEL"/>
+            <EnumValue Name="MIDPOINT"/>
+            <EnumValue Name="CUTPOINT"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PLOT" EqualsSign="None">
+        <Parameter Name="CURVE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="ROC"/>
+            <EnumValue Name="REFERENCE"/>
+            <EnumValue Name="PR"/>
+            <EnumValue Name="NONE"/>
+        </Parameter>
+        <Parameter Name="PR_INTERPOLATE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TP"/>
+            <EnumValue Name="FP"/>
+        </Parameter>
+        <Parameter Name="MODELQUALITY" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PRINT" EqualsSign="None">
+        <Parameter Name="SE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+        <Parameter Name="COORDINATES" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="ROC"/>
+            <EnumValue Name="PR"/>
+        </Parameter>
+        <Parameter Name="CLASSIFIER" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+    </Subcommand>
+</Command>

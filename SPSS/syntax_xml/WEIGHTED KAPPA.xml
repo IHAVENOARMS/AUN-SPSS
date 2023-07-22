@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2020                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 11/17/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+ xmlns:p1="http://xml.spss.com/spss/extension"
+ Name="WEIGHTED KAPPA"
+ Language="Syntax"
+ EndRequired="None"
+ IsArbitrary="No">
+    <Subcommand Name="GLOBAL_PARAMS">
+        <Parameter Name="ALL" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="BY" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="MISSING" EqualsSign="None">
+        <Parameter Name="SCOPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TABLE"/>
+            <EnumValue Name="LISTWISE"/>
+        </Parameter>
+        <Parameter Name="CLASSMISSING" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="EXCLUDE"/>
+            <EnumValue Name="INCLUDE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="CRITERIA" EqualsSign="None">
+        <Parameter Name="ASYMPTOTIC_CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="WEIGHTING" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="LINEAR"/>
+            <EnumValue Name="QUADRATIC"/>
+        </Parameter>
+        <Parameter Name="IGNORE_CASE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TRUE"/>
+            <EnumValue Name="FALSE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PRINT" EqualsSign="None">
+        <Parameter Name="TABULATION" EqualsSign="None" ParameterType="Keyword">
+            <EnumValue Name="ALL"/>
+            <EnumValue Name="BY"/>
+        </Parameter>
+        <Parameter Name="CASE" EqualsSign="None" ParameterType="Keyword">
+            <EnumValue Name="UPPER"/>
+            <EnumValue Name="LOWER"/>
+        </Parameter>
+        <Parameter Name="ORDER" EqualsSign="None" ParameterType="Keyword">
+            <EnumValue Name="ASCENDING"/>
+            <EnumValue Name="DESCENDING"/>
+        </Parameter>
+    </Subcommand>
+</Command>

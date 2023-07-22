@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2019                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 8/15/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+ xmlns:p1="http://xml.spss.com/spss/extension"
+ Name="POWER ONEWAY ANOVA"
+ Language="Syntax"
+ EndRequired="None"
+ IsArbitrary="No">
+    <Subcommand Name="PARAMETERS" EqualsSign="None">
+        <Parameter Name="SIGNIFICANCE" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="GROUP_SIZES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="POWER" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="GROUP_WEIGHTS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="EQUAL"/>
+        </Parameter>
+        <Parameter Name="POOLED_SD" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="GROUP_MEANS" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="CONTRAST" EqualsSign="None">
+        <Parameter Name="COEFFICIENTS" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="TEST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="NONDIRECTIONAL"/>
+            <EnumValue Name="DIRECTIONAL"/>
+        </Parameter>
+        <Parameter Name="PAIRWISE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+        <Parameter Name="ADJUST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="BONFERRONI"/>
+            <EnumValue Name="SIDAK"/>
+            <EnumValue Name="LSD"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PLOT" EqualsSign="None">
+        <Parameter Name="TOTAL_N" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="POOLED_SD" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="TOTAL_N_XAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="POOLED_SD_XAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="TOTAL_N_YAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="POOLED_SD_YAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <!--<Parameter Name="TOOLTIP" EqualsSign="None" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>-->
+        <Parameter Name="VROTATE" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="HROTATE" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+</Command>

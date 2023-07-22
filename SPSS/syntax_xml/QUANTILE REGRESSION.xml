@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2019                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+<!-- Created 6/6/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="QUANTILE REGRESSION" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="GLOBAL_PARAMS" EqualsSign="None">
+        <Parameter Name="BY" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="WITH" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="CRITERIA" EqualsSign="None">
+        <Parameter Name="QUANTILE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TO"/>
+            <EnumValue Name="BY"/>
+        </Parameter>
+        <Parameter Name="IID" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TRUE"/>
+            <EnumValue Name="FALSE"/>
+        </Parameter>
+        <Parameter Name="BANDWIDTH" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="BOFINGER"/>
+            <EnumValue Name="HALL_SHEATHER"/>
+        </Parameter>
+        <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="METHOD" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="AUTO"/>
+            <EnumValue Name="SIMPLEX"/>
+            <EnumValue Name="INTERIOR_POINT"/>
+        </Parameter>
+        <Parameter Name="TOL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="CONV" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXITER" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="MISSING" EqualsSign="None">
+        <Parameter Name="CLASSMISSING" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="EXCLUDE"/>
+            <EnumValue Name="INCLUDE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="MODEL" EqualsSign="None">
+        <Parameter Name="INTERCEPT" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TRUE"/>
+            <EnumValue Name="FALSE"/>
+        </Parameter>
+        <Parameter Name="REGWGT" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="SAVE" EqualsSign="None">
+        <Parameter Name="PRED" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="RESID" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="CIPREDL" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="CIPREDU" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="PREDICT_EFFECTS" EqualsSign="None">
+        <Parameter Name="NUM_TOP_EFFECTS" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="PREDICTION_TABLES" EqualsSign="None"/>
+    <Subcommand Name="PREDICTION_LINES" EqualsSign="None"/>
+    <Subcommand Name="PRINT" EqualsSign="None">
+        <Parameter Name="PARAMETER" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="CORB" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="COVB" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="NONE" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="PLOT" EqualsSign="None">
+        <Parameter Name="MAX_CATEGORIES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="PREDICTED_BY_OBSERVED" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TRUE"/>
+            <EnumValue Name="FALSE"/>
+        </Parameter>
+        <Parameter Name="PARAM_EST" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="OUTFILE" EqualsSign="None">
+        <Parameter Name="CORB" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="COVB" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="FILE_SEPARATE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="TRUE"/>
+            <EnumValue Name="FALSE"/>
+        </Parameter>
+        <Parameter Name="MODEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="PARAMETER" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="EXTERNAL" EqualsSign="None"/>
+</Command>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2018                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+<!-- Updated 4/13/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension file:SyntaxSchema.xsd"
+    Name="VGRAPH" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="GRAPHDATASET" EqualsSign="None">
+        <Parameter Name="NAME" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="VARIABLES" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="GRAPHSPEC" EqualsSign="None">
+        <Parameter Name="SOURCE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="INLINE"/>
+        </Parameter>
+     </Subcommand>
+</Command>

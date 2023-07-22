@@ -1,0 +1,12 @@
+GET
+  FILE='C:\Program Files\SPSS\tutorial\sample files\demo.sav'.
+FREQUENCIES
+  VARIABLES=äwó
+  /ORDER=  ANALYSIS .
+CROSSTABS
+  /TABLES=ågë—í[ññ BY ê´ï  BY ≤›¿∞»Øƒ
+  /FORMAT= AVALUE TABLES
+  /CELLS= COUNT EXPECTED ROW .
+FREQUENCIES
+  VARIABLES=ç•à˜èÛãµ
+  /ORDER=  ANALYSIS .

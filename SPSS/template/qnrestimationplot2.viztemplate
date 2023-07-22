@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualization id="visualization1" version="2.8">
+  <extension>
+    <template aggregates="false" inst="http://www.w3.org/2001/XMLSchema-instance"
+      location="http://xml.spss.com/visualization http://xml.spss.com/visualization/vizml-2.8.xsd"
+      summary="sum; mean; cumulativeSum; min; max; mode; range; percent; cumulativePercent"
+      url="http://xml.spss.com/visualization" version="1">
+      <name xml:lang="en">paramplot</name>
+      <description xml:lang="en"/>
+      <variable type="continuous">
+        <name xml:lang="en">percentile1</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">estimate1</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">lowerbound1</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">upperbound1</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">percentile2</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">estimate2</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">lowerbound2</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">upperbound2</name>
+        <description xml:lang="en"/>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">X1</name>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">Y1</name>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">X2</name>
+      </variable>
+      <variable type="continuous">
+        <name xml:lang="en">Y2</name>
+      </variable>
+      
+      <aesthetics>Color;Transparency;Size;Label</aesthetics>
+      <image>JIAFOEHENAKAKBKAAAAAAANAJEIEEECFAAAAAAEGAAAAAAEGIACAAAAAAAPPAICADAAAAAGAEEJEEEBEEFIHKNNONJPDIELBPGIBHMDDEHMOAOANBKDIDEHIOANBKNBEIOAJBMBKIIDEBCNAJOBEDABEECIEIACNAEFEFMKEKDEJEFIOANBCDIIEIAOAFBKCJGALCKDE&#10;GABBBBBMKINBKAKCEJAJBMBKDEFEFCKEEIEHIMABECIEKPEOONDPNOFOFPCHHPONPJECPOLHOLPNBOOHHNLPNBJLLLPEPJHPJLHOPMLPOFNDFHBCKGJHEACALOALKIFMCCMGLCFJKIPMHOLMFOCHDMDMDMAPHMKGFLKBMAGANDCLEAMKGCFJKEFKDKDKDKCHJLMAAICO&#10;BPIDMBJCEBKAOHPLPFIFGJIBGICAGFLANNNLLCAGBNPDNKHEAMCBALKNBKHBPCEAMCKGFKCFCAGBNJGPHPLOHCHCCAGBNJGLGLEEIOAENKPAPBEAMCKGNLOHNCAGBFLOJNDLGMGLGFDBALICEPAPBGNFOMDHFAMCKOIIEPNPLHBALICEPAOBEDGLPCPFKAIFENODLOOM&#10;NBLNALGFGFGFOIPIPIBNOPFNFNFNIOIOIOENENEFBKAFAFPODPOALGEGEKBLFPKHNGDMKKGFLKJNMGGBNOPANANABMGPCPCPCDEBKAJKHPJDCOCJLMFLMIDLODNHCLNALCABIAEECCBBELPHKHKHKDODODOOHPLPDFJKEJKHPJHBCFPHOPENDJJENIDOPFOLEDGLPNPL&#10;LDBODLAGMKJLDMHDNHNPKFPHFPKEDOIDGMEGJDENCFAGBMICLMHODPOKJELGOBPDGNGLILLJJECKJKKAHJCHOOGOGOGOGJNPEEDJNANAOAKBEJPIHCGCEJNJJNJFFCOJADHALOJIMCHHAMCADLCAOFKDKHEPIOPHMEPKPHGKGDMKKFNKGJENEPKIMBGCGMAGGFGIFAGI&#10;PLPHFJNBDFPCHEFAGNCNCNCFMCGBDOOGILJGKOJODNGIPIHNHNNLLHFPPNPLLFGAJBGAALECJECPKNJAHNKLBCALACNMHEFAHJEEDFBBFEOKNPMOMMMDMCAPOODIGKGIPCLBBBJLGOIEMJPJPGLFKCOMPGMJFAJAIBMIGKLJKPJPDLNMALCIBMAOONONOBHHPCODAHPE&#10;HDFGKGEGJJGIFABOICHKBHGBKMAGIGEFNKKDEALOAPAPAHJHJHJLPLPLPJLDIFEPGEEIDMHHHGMHGBPFCDMHFODBEHOLNHDHAIDCPKALEOJEGHKHKNINAKNHFECBHGKBLPMKNCJFIOAFKDNJOAJMKIGEDKMMGBPPKHLHNAOEIHHPOIMIDDICPMEDNGJFODJFEMEDJEGK&#10;AGNLJHDEGBOFIABBFMKMHOPMLFOPEBNHJFDFBIFLALALADNDNDNEAPKEECCBMMGBPPAHADFEEJOKALDAKLPHPLJOILOEFHBIIDDNIBGBPFFPMCFLLEOOJOJGKPPFINANIAEAKDFHLCDNALIPCJKNBGBBDIIAHFBBIIDOKDGJFGKHIBCLPCFLJGIKLIKAEEBIBAHGLIEE&#10;FJGAFPBMEDFEPDBGEMDHNPCLIBJJMJMJEGJBGBIHEHEBOCMNMAEEFNPELIBKABOIPFHGGFIANHLADEBIFABCCIECJEMIHKNMNKCIGAFHGIIINBABBMEFHMMHKCFBHJGFNBMALPLAKGEJKOHPAMKOKCFNPNEAFBMCIIHKILOOOOAGLDCFLPGCMGNEIKICKGPDBCHODKLL&#10;DPJPDLBMJAILALFIDIFFFPAPEDMCBBAIHDMIGENILCDBKBJOOADICDMHKNNPNPKPFMFAJJDACONHMNOMJGFCAMKAPLAOCJANBONOLFDODHAFPJJPHMPANLAHPLFJOHNPCHBJDIHKEHAMADIBNBJKLFBHMDMAFPPFEGKPKFLFDHKBGBDOBEJKNJFDECAJGGDNIDDCDHAL&#10;IFOGIFANIDMKGFCIAMNJODPEGHDIDIHMNKGHLACIEFGMBMONBLCALMLOFPCOGPNHGDLJNAHIDMIKAOHNNKFDCNOAOFHMBJOLOEDBMKEFKCFIHFBEPCOCOCGNPKHNFEHHLGNIEDOMKFEDDEBIOKFCLFIOPDMAOEMABEFFNDDFDPHKKDEALGOHOHOBJBEBLDCEPGNHKPOG&#10;CEHOAGBDFDBDEAHLJLIFLJOEOMCGMJFIHIOBLGPJMNAGCCOMCEFLKMDLDLGEPJJLCFJGPGKMCGHBGNMNMNMNAMAMAAEILANFJLDAFHDCOBCKNGLDBCIGHCAGNOMOMOAEGBNJJMEGKDJHBOLILIGEFOEGDGDIMIJDJFOJLMDNAIFFKCFJKDMHFNPIPBLOHNOLCLOMBJKL&#10;AOCEPAPANEEPIAIFEIFCJMKOMMFCFDHJPDAPEALGBEGJDIPLLLKLKKMCDLFFHAJJAOEKIDFLJKGCIFJMEGCDBJIEIDFPDKFLKFDKPFCHCHCKELFFACFJFLJPFPJAGLAGJKLKOAGPFILONGAOOJGCGCMGFNIFIFEIFKOKKDINEBBJNMBDLBBGKFEIFAOKNBNEFPDLPPDH&#10;MBOECOFDPGJFFOCHJLPKPKPAPOPININIJFLJGCJOAGFKNINNIAODDCLAPBNAEACAHOHOHOAJDAJJKFDCNKJDFIPNFIGJFKGFECCBBAEDEJDNECLHLHFJFJAJKJLCNGNNPALMAFAPCIDIMOHBIOELPGJEBJLHAGJNPPMFANNGBIFOKHHMEOECMCDMJNPDCAGJAJAIFCAG&#10;JAIFCAGJAIFCAGJAJAIFCAGJAIFMGDMCHPNHACBLNIALKFNEDJMLNJCDAIFMKNHACBJFIPHCPHILBPJFNDEMCGIGGMBGBKGEGIFGPPFAGBKIMDAKFLLBNDIDIDALMLAGGCEBKABMFKNKNNGPMMMMMMKPKPKDKLNGDHGJFFJKEFMCPHDOBKEFKCNALBOHHODKFIAOBFBO&#10;OILKGFLHHEBOAHIBOCNGNOGLDNJOEPGPGPGLJGLMCENIMALMOPLMHODPBCPAIGNOBIBAGJFOGDADIJECMFKNKNNGLECJEBPIHMBNNGLIIDLIDHHAPEEPICJNJFOKGMCCMCIHDJMKNKNKNMOMOMGEFGBKJOAFIGMAGNKGFLNNNNNFIDIADOCAOAGGCDJBCOLKADHLLAGB&#10;KPGOJBIFDBMLAIAAAFMCGBDEALANMFLDAEDJPMHOBOACILBCEDBKMKDJLADEIBFPJFFMCGBJBMPOGKOPDAEPFBLFILINJFCBICAAAAAAAAJEFEOEEEOKCEAGCI</image>
+    </template>
+  </extension>
+  <!--  Size  -->
+  <location id="location_1058265" method="fixed" part="left" value="0px"/>
+  <location id="location_1058266" method="fixed" part="right" value="1300px"/>
+  <location id="location_1058267" method="fixed" part="top" value="0px"/>
+  <location id="location_1058268" method="fixed" part="bottom" value="250px"/>
+  <!--  Data  -->
+  <intervalDomain id="intervalDomain_10"/>
+  <intervalDomain id="intervalDomain_25"/>
+  <intervalDomain id="intervalDomain_40"/>
+  
+    
+  <!--  Structure  -->
+  <graph axesOutside="true" cellStyle="graphStyle4" id="graph_1" style="graphStyle">
+    <!--  Size  -->
+    <location id="location_1058284" method="fixed" part="right" specifiedByUser="true"
+      value="22%"/>
+    <location id="location_1058285" method="fixed" part="left" specifiedByUser="true"
+      value="6%"/>
+    <location id="location_1058286" method="fixed" part="bottom" specifiedByUser="true"
+      value="90%"/>
+    <location id="location_1058287" method="fixed" part="top" specifiedByUser="true" value="20%"/>
+    <coordinates id="coordinates_1058288">
+      <dimension domain="intervalDomain_10" id="dimension_1058289" lowerMargin="5%"
+        niceLowerMapping="false" niceUpperMapping="false" upperMargin="5%">
+        <scale id="scale_1058290" method="linear"/>
+        <axis id="axis_1058291" style="axisStyle">
+          <label id="label_1058351" style="labelStyle" textFrameStyle="labelStyle9">
+            <text id="text_1058351">Quantiles</text>
+          </label>
+          <majorTicks id="majorTicks_1058292" markStyle="majorTicksStyle13"
+            style="majorTicksStyle" tickFrameStyle="majorTicksStyle7"/>
+        </axis>
+      </dimension>
+      <dimension id="dimension_1058293" upperMargin="5%">
+        <axis id="axis_1058294" style="axisStyle2">
+          <label id="label_1058295" style="labelStyle" textFrameStyle="labelStyle7">
+            <text id="text_1058296">Parameter Estimates</text>
+          </label>
+          <majorTicks id="majorTicks_1058297" markStyle="majorTicksStyle14"
+            style="majorTicksStyle2" tickFrameStyle="majorTicksStyle8"/>
+        </axis>
+      </dimension>
+    </coordinates>
+    <area breakRepresentation="wings" dot="true" id="area_1"
+      positionModifier="minusIntersection" showDiscontinuity="false" zOrder="0">
+      <summaryStatistic convertIntervalToSingleValue="false" method="range"/>
+      <x variable="X1"/>
+      <y variable="Y1"/>
+    </area>
+    <line breakRepresentation="wings" dot="true" id="line_10" name="Estimated Parameters Plots"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle" zOrder="0">
+      <x variable="percentile1"/>
+      <y variable="estimate1"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_11" name="Estimated Parameters Plots"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle2" zOrder="0">
+      <x variable="percentile1"/>
+      <y variable="linearbeta1"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_12" name="Estimated Parameters Plots"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle1" zOrder="0">
+      <x variable="percentile1"/>
+      <y variable="linearlowerbeta1"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_13" name="Estimated Parameters Plots"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle1" zOrder="0">
+      <x variable="percentile1"/>
+      <y variable="linearupperbeta1"/>
+    </line>
+  </graph>
+  <graph axesOutside="true" cellStyle="graphStyle4" id="graph_2" style="graphStyle">
+    <!--  Size  -->
+    <location id="location_1058294" method="fixed" part="right" specifiedByUser="true"
+      value="44%"/>
+    <location id="location_1058295" method="fixed" part="left" specifiedByUser="true"
+      value="28%"/>
+    <location id="location_1058296" method="fixed" part="bottom" specifiedByUser="true"
+      value="90%"/>
+    <location id="location_1058297" method="fixed" part="top" specifiedByUser="true" value="20%"/>
+    <coordinates id="coordinates_1058298">
+      <dimension domain="intervalDomain_10" id="dimension_1058299" lowerMargin="10%"
+        niceLowerMapping="false" niceUpperMapping="false" upperMargin="5%">
+        <scale id="scale_1058390" method="linear"/>
+        <axis id="axis_1058391" style="axisStyle">
+          <label id="label_1058451" style="labelStyle" textFrameStyle="labelStyle9">
+            <text id="text_1058451">Quantiles</text>
+          </label>
+          <majorTicks id="majorTicks_1058392" markStyle="majorTicksStyle13"
+            style="majorTicksStyle" tickFrameStyle="majorTicksStyle7"/>
+        </axis>
+      </dimension>
+      <dimension id="dimension_1058393" upperMargin="5%">
+        <axis id="axis_1058394" style="axisStyle2">
+          <label id="label_1058395" style="labelStyle" textFrameStyle="labelStyle7">
+            <text id="text_1058396">Parameter Estimates</text>
+          </label>
+          <majorTicks id="majorTicks_1058397" markStyle="majorTicksStyle14"
+            style="majorTicksStyle2" tickFrameStyle="majorTicksStyle8"/>
+        </axis>
+      </dimension>
+    </coordinates>
+    <area breakRepresentation="wings" dot="true" id="area_2" name="Confidence intervals of the parameter estimates"
+      positionModifier="minusIntersection" showDiscontinuity="false" zOrder="0">
+      <summaryStatistic convertIntervalToSingleValue="false" method="range"/>
+      <x variable="X2"/>
+      <y variable="Y2"/>
+    </area>
+    <line breakRepresentation="wings" dot="true" id="line_20" name="Parameter estimates at the different regression quantiles"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle" zOrder="0">
+      <x variable="percentile2"/>
+      <y variable="estimate2"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_21" name="Parameter estimates for the ordinary linear regression with the same predictors"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle2" zOrder="0">
+      <x variable="percentile2"/>
+      <y variable="linearbeta2"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_22" name="Confidence interval bounds for the ordinary linear regression with the same predictors"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle1" zOrder="0">
+      <x variable="percentile2"/>
+      <y variable="linearlowerbeta2"/>
+    </line>
+    <line breakRepresentation="wings" dot="true" id="line_23" name="Estimated Parameters Plots"
+      positionModifier="none" showDiscontinuity="false" style="lineStyle1" zOrder="0">
+      <x variable="percentile2"/>
+      <y variable="linearupperbeta2"/>
+    </line>
+  </graph>
+  <legend id="legend_1058333" style="legendStyle" tickTextStyle="legendStyle2">
+    <!--  Size  -->
+    <location id="location_1058336" method="fixed" part="right" specifiedByUser="true"
+      value="100%"/>
+    <location id="location_1058334" method="fixed" part="left" specifiedByUser="true"
+      value="36%"/>
+    <legendTarget id="legendTarget_1058340" target="area_2"/>
+    <legendTarget id="legendTarget_1058341" target="line_20"/>
+    <legendTarget id="legendTarget_1058342" target="line_21"/>
+    <legendTarget id="legendTarget_1058343" target="line_22"/>
+  </legend>
+  <labelFrame id="labelFrame_1058345" style="labelFrameStyle">
+    <!--  Extension  -->
+    <extension graphId="graph_36" id="extension_1058366" position="title"/>
+    <!--  Size  -->
+    <location id="location_1058365" method="sizeToContent" part="height"/>
+    <location id="location_1058366" method="fixed" part="left" specifiedByUser="true"
+      value="6%"/>
+    <location id="location_1058367" method="fixed" part="right" specifiedByUser="true"
+      value="22%"/>
+    <location id="location_1058368" method="attach" part="bottom" target="graph_1"/>
+    <label id="label_1058369" purpose="title" style="labelStyle12">
+      <text id="text_1058360">[Graph1 Title]</text>
+    </label>
+  </labelFrame>
+  <labelFrame id="labelFrame_1058346" style="labelFrameStyle">
+    <!--  Extension  -->
+    <extension graphId="graph_37" id="extension_1058376" position="title"/>
+    <!--  Size  -->
+    <location id="location_1058375" method="sizeToContent" part="height"/>
+    <location id="location_1058376" method="fixed" part="left" specifiedByUser="true"
+      value="28%"/>
+    <location id="location_1058377" method="fixed" part="right" specifiedByUser="true"
+      value="44%"/>
+    <location id="location_1058378" method="attach" part="bottom" target="graph_2"/>
+    <label id="label_1058379" purpose="title" style="labelStyle12">
+      <text id="text_1058370">[Graph2 Title]</text>
+    </label>
+  </labelFrame>
+  
+  
+  <!--  Styles  -->
+  <style color="black" color2="transparent" 
+    font-size="8pt;6pt" font-weight="bold" id="labelStyle" margin="3px" padding="1px"/>
+  <style color="black" color2="transparent" 
+    font-size="10pt;8pt" font-weight="bold" id="labelStyle2" margin="6px" padding="1px"/>
+  <style color="black" color2="transparent" 
+    font-size="10pt;8pt" font-weight="bold" id="labelStyle3" margin="6px" padding="1px"/>
+  <style color="black" color2="transparent" 
+    font-size="10pt;8pt" font-weight="bold" id="labelStyle4" margin="6px" padding="1px"/>
+  <style color="black" color2="transparent" font-size="10pt" font-weight="bold" id="labelStyle5"
+    margin="3px" padding="2px"/>
+  <style color="black" color2="transparent" 
+    font-size="10pt;8pt" font-weight="bold" id="labelStyle6" margin="3px" padding="2px"/>
+  <style color="transparent" color2="transparent" id="labelStyle7" visible="false"/>
+  <style color="transparent" color2="transparent" id="labelStyle8" visible="false"/>
+  <style color="transparent" color2="transparent" id="labelStyle9" visible="true"/>
+  <style color="transparent" color2="transparent" id="labelStyle10" visible="false"/>
+  <style color="transparent" color2="transparent" id="labelStyle11" visible="false"/>
+  <style color="black" color2="transparent" font-weight="regular" 
+    font-size="8pt;6pt" id="labelStyle12" margin="0px" padding="0px"/>
+  <style color="transparent" color2="transparent" id="labelFrameStyle"/>
+  <style color="white" color2="transparent" id="visualizationStyle" padding="0.3in"/>
+  <style color="white" color2="transparent" id="graphStyle"/>
+  <style color="white" color2="transparent" id="graphStyle2"/>
+  <style color="white" color2="transparent" id="graphStyle3"/>
+  <style color="white" color2="transparent" id="graphStyle4"/>
+  <style color="white" color2="transparent" id="graphStyle5"/>
+  <style color="white" color2="transparent" id="graphStyle6"/>
+  <style id="legendStyle" margin="5px"/>
+  <style color="black" color2="transparent" font-size="10pt" font-weight="regular"
+    id="legendStyle2" margin="2px"/>
+  <style color="black" id="axisStyle" stroke-width="0.5pt"/>
+  <style color="black" id="axisStyle2" stroke-width="0.5pt"/>
+  <style color="black" id="axisStyle3" stroke-width="0.5pt"/>
+  <style color="black" id="axisStyle4" stroke-width="0.5pt"/>
+  <style color="black" id="axisStyle5" stroke-width="0.5pt"/>
+  <style color="black" id="axisStyle6" stroke-width="0.5pt"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle" margin="5px" visible="true"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle2" margin="5px"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle3" margin="5px" visible="true"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle4" margin="5px"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle5" margin="5px"/>
+  <style color="black"  font-size="8pt;8pt"
+    id="majorTicksStyle6" margin="5px"/>
+  <style id="majorTicksStyle7" visible="false"/>
+  <style id="majorTicksStyle8" visible="false"/>
+  <style id="majorTicksStyle9" visible="false"/>
+  <style id="majorTicksStyle10" visible="false"/>
+  <style id="majorTicksStyle11" visible="false"/>
+  <style id="majorTicksStyle12" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle13" stroke-width="1pt" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle14" stroke-width="1pt" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle15" stroke-width="1pt" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle16" stroke-width="1pt" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle17" stroke-width="1pt" visible="false"/>
+  <style color="#AEAEAE" id="majorTicksStyle18" stroke-width="1pt" visible="false"/>
+  <style color="black" id="lineStyle" depth="80%" stroke-dasharray="600.0%,0.2px,600.0%" stroke-width="1px"/>
+  <style color="red" id="lineStyle1" depth="80%" stroke-dasharray="200.0%,400.0%" stroke-width="1px"/>
+  <style color="red" id="lineStyle2" depth="80%" stroke-width="1px"/>
+</visualization>
+

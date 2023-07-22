@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2020                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+
+<!-- @version: -->
+<!-- This is used for the Enterprise manager common administrator for Statistics Server -->
+<server id="1" name="Statistics Server Configuration" xmlns="http://xml.spss.com/spss/admin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.spss.com/spss/admin http://xml.spss.com/spss/admin/serverconfig-1.0.xsd">
+    <group id="104" name="Connections">
+        <item desc="The name or IP address of the host computer on which the server product is running." editable="true" id="5" length="1024" name="Host*" type="string" value="localhost"/>
+        <item desc="Port number on which the server product is listening for connections." editable="true" id="6" max="64000" min="0" name="Port Number*" type="int" value="3027"/>
+        <item desc="Number of concurrent client connections allowed." editable="true" id="13" max="2000" min="0" name="Maximum Number of Users" type="int" value="1000"/>
+        <item desc="Whether the server product uses Secure Sockets Layer (SSL) for its connections." id="21" name="Secure Sockets Layer*" options="None;None;TLSv1;TLSv1.1;TLSv1.2" type="list" value="None"/>
+        <item desc="Minutes for server to allow a disconnected client to reconnect." editable="true" id="44" max="999" min="0" name="Automatic Reconnection Time (min)" type="int" value="100"/>
+        <item desc="URL to the Group Authorization Service Provider" editable="true" id="46" length="260" name="Group Authorization Service URL*" type="string" value=""/>
+    </group>
+    <group id="105" name="File Locations">
+        <item desc="The location of the current configuration file on the host computer." editable="true" id="17" length="260" name="Configuration File*" type="string" value="C:\Program Files\SPSSInc\StatisticsServer27\statisticsd.conf"/>
+        <item desc="The directory or directories in which temporary files are stored.  Multiple directories are separated by commas." editable="true" id="11" length="260" name="Server Temp Files Directory" type="string" value="C:\TEMP\spsstmp\"/>
+		<item desc="The directory in which temporary background production job files, including output, are stored until the user retrieves them." editable="true" id="42" length="260" name="Background Output Temp Directory*" type="string" value="C:\TEMP\spsstmp\"/>
+        <item desc="The location and name of the profile file on the host computer." editable="true" id="26" length="260" name="User Profile File" type="string" value="UserSettings.xml"/>
+        <item desc="The location of SSL public key file." editable="true" id="35" length="512" name="SSL Public Key File*" type="string" value=""/>
+        <item desc="The location of SSL private key file." editable="true" id="36" length="512" name="SSL Private Key File*" type="string" value=""/>
+		<item desc="Python home directory" editable="true" id="43" length="260" name="Python Home Directory" type="string" value=""/>
+        <item desc="Python3 home directory" editable="true" id="49" length="260" name="Python3 Home Directory" type="string" value=""/>
+    </group>
+    <group id="106" name="Logging">
+        <item desc="The location and name of the active log file on the host computer." editable="true" id="9" length="260" name="Active Log(s)*" type="string" value="statisticsd.log"/>
+        <item desc="Maximum number of log files to create when rotating files. Maximum limit 32 files" editable="true" id="10" max="32" min="0" name="Number of Backup Log Files" type="int" value="6"/>
+        <item desc="The number of seconds that elapse before new performance information is written to the log file." editable="true" id="24" max="600" min="0" name="Performance Log Interval" type="int" value="0"/>
+        <item desc="Maximum file size (in kilobytes) of a single statisticsd log file." editable="true" id="18" max="64000" min="0" name="Maximum Log File Size (kb)" type="int" value="64"/>
+    </group>
+    <group id="107" name="Users">
+        <item desc="The name of the system account that identifies users with administrative privileges." editable="true" id="25" length="260" name="Admin Group" type="string" value="Administrators"/>
+        <item desc="Whether data is displayed in clients connected to the server product." id="23" name="Client Data Access" options="Full Data Editor Data Access;No Data Editor Data Access" type="list" value="Full Data Editor Data Access"/>
+        <item desc="The name of the Sort method presently used in this Statistics Server." id="31" name="Sort*" options="DefaultSort;SyncSort;Nsort;CoSORT;" type="list" value="DefaultSort"/>
+        <item desc="The default umask for clients that are connected to the server product." id="22" name="Umask" length="260" editable="true" type="string" value="033"/>
+        <item desc="Maximum thread limit a multi-threaded procedure can take." id="32" name="Maximum Threads" type="int" value="4" max="64000" min="1"/>
+        <item desc="Whether the temporary file cache is compressed with zlib compression." editable="true" id="37" name="Cache Compression" type="bool" value="0"/>
+        <item desc="Whether the syntax can override the Cache Compression setting." id="38" name="Compression Override" options="Prohibit Cache Compression Override with Syntax;Allow Cache Compression Override with Syntax" type="list" value="Allow Cache Compression Override with Syntax"/>
+		<item desc="In megabytes (mb), the maximum Java Virtual Machine (JVM) memory allocated for the client process. The allowable range is 32-2048." id="39" name="Maximum JVM Memory (mb)" type="int" value="225" max="2048" min="32"/>
+        <item desc="Whether the compiled transformations enabled." editable="true" id="40" name="Compiled Transformations" type="bool" value="0"/>
+        <item desc="Compiler path for compiled transformations." editable="true" id="41" name="Compiler Path" type="string" value=""/>
+		<item desc="Restrict Database Access to sources defined in Permitted Database Sources." editable="true" id="47" name="Restrict Database Access" type="bool" value="0"/>
+		<item desc="Semicolon delimited list of Permitted Database Sources when Database Access is restricted." editable="true" id="48" length="6000" name="Permitted Database Sources" type="string" value=""/>
+        <item desc="Whether INSERT HIDDEN command is enabled." id="50" name="INSERT HIDDEN Feature*" options="Disabled;Enabled" type="list" value="Disabled"/>
+	</group>
+    <group id="108" name="COP Configuration">
+        <item desc="COP Status available/not-available" editable="false" id="81" length="1024" name="COP Status" type="string" value="Not-Available"/>        
+        <item desc="The name or IP address of the host computer on which the COP is running." editable="true" id="83" length="1024" name="COP Host*" type="string" value="spsscop"/>
+        <item desc="Port number on which the COP web service is listening for connections." editable="true" id="84" max="64000" min="0" name="COP Port Number*" type="int" value="80"/>                        
+        <item desc="COP login user name" editable="true" id="86" length="1024" name="COP Login Name" type="string" value=""/>
+        <item desc="COP login password" editable="true" id="87" length="1024" name="COP Password" type="password" value=""/>         
+        <item desc="COP provider" id="91" name="COP Provider" options="Local User Repository;Active Directory;Active Directory with Local Override;iSeries;OpenLDAP;" type="list" value="Local User Repository"/>
+        <item desc="COP enable or disable switch." editable="true" id="82" name="COP Enabled*" type="bool" value="0"/> 
+        <item desc="Server name as appear in COP" editable="false" id="88" length="1024" name="Server Name" type="string" value=""/>
+        <item desc="Description about the server" editable="false" id="89" length="1024" name="Description" type="string" value=""/>
+        <item desc="Periodic update interval timeout in minutes." editable="false" id="85" max="64000" min="0" name="Update Interval (min)" type="int" value="2"/>
+        <item desc="Server weight." editable="false" id="90" max="10" min="1" name="Weight" type="int" value="5"/>
+    </group> 
+</server>

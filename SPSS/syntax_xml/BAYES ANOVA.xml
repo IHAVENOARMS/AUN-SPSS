@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2017                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 4/4/17 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="BAYES ANOVA" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="GLOBAL_PARAMS" EqualsSign="None">
+        <Parameter Name="BY" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="CRITERIA" EqualsSign="None">
+        <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="TOL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXITER" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+	<Subcommand Name="DESIGN" EqualsSign="None">
+        <Parameter Name="REGWGT" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="INFERENCE" EqualsSign="None">
+        <Parameter Name="ANALYSIS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="POSTERIOR"/>
+            <EnumValue Name="BAYESFACTOR"/>
+            <EnumValue Name="BOTH"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="ESTBF" EqualsSign="None">
+        <Parameter Name="COMPUTATION" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="JZS"/>
+            <EnumValue Name="ZELLNER"/>
+            <EnumValue Name="HYPER"/>
+            <EnumValue Name="ROUDER"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PRIOR" EqualsSign="None">
+        <Parameter Name="TYPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="REFERENCE"/>
+            <EnumValue Name="CONJUGATE"/>
+        </Parameter>
+        <Parameter Name="SHAPEPARAM" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="SCALEPARAM" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MEANVECTOR" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="VMATRIX" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="IDENTITY"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PLOT" EqualsSign="None">
+        <Parameter Name="MEANS" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="ERRORVAR" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>
+    </Subcommand>
+</Command>

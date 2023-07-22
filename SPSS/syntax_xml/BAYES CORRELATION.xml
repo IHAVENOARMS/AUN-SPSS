@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2017                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 4/4/17 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="BAYES CORRELATION" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="MISSING " EqualsSign="None">
+        <Parameter Name="SCOPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="PAIRWISE"/>
+            <EnumValue Name="LISTWISE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="CRITERIA " EqualsSign="None">
+        <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="SEED" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="RANDOM"/>
+        </Parameter>
+        <Parameter Name="TOL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXITER" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MCSAMPLES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="POSTSAMPLES" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="INFERENCE" EqualsSign="None">
+        <Parameter Name="VARIABLES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="ANALYSIS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="POSTERIOR"/>
+            <EnumValue Name="BAYESFACTOR"/>
+            <EnumValue Name="BOTH"/>
+        </Parameter>
+        <Parameter Name="CVALUE" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXPLOTS" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="ESTBF" EqualsSign="None">
+        <Parameter Name="TYPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="JZS"/>
+            <EnumValue Name="FRACTION"/>
+        </Parameter>
+        <Parameter Name="NULLVALUE" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+</Command>

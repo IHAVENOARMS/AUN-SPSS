@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2017                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 4/4/17 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="BAYES ONESAMPLE" EndRequired="None" IsArbitrary="No" Language="Syntax">
+    <Subcommand Name="MISSING " EqualsSign="None">
+        <Parameter Name="SCOPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="ANALYSIS"/>
+            <EnumValue Name="LISTWISE"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="CRITERIA" EqualsSign="None">
+        <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="METHOD" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="AGL"/>
+            <EnumValue Name="MCA"/>
+        </Parameter>
+        <Parameter Name="SEED" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="RANDOM"/>
+        </Parameter>
+        <Parameter Name="TOL" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MAXITER" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MCSAMPLES" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="INFERENCE" EqualsSign="None">
+        <Parameter Name="DISTRIBUTION" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="NORMAL"/>
+            <EnumValue Name="BINOMIAL"/>
+            <EnumValue Name="POISSON"/>
+        </Parameter>
+        <Parameter Name="VARIABLES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="ANALYSIS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="POSTERIOR"/>
+            <EnumValue Name="BAYESFACTOR"/>
+            <EnumValue Name="BOTH"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="DATA" EqualsSign="None">
+        <Parameter Name="VARIABLES" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="VARIANCE" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="NULLVALUE" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="ALTERGVALUE" EqualsSign="Required" ParameterType="Keyword"/>
+		<Parameter Name="NULLPRIORPARAM" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="ALTERPRIORPARAM" EqualsSign="Required" ParameterType="Keyword"/>
+		<Parameter Name="SUCCESS" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="LAST"/>
+            <EnumValue Name="FIRST"/>
+            <EnumValue Name="MIDPOINT"/>
+            <EnumValue Name="CUTPOINT"/>
+            <EnumValue Name="LEVEL"/>
+        </Parameter>
+    </Subcommand>
+    <Subcommand Name="PRIOR" EqualsSign="None">
+        <Parameter Name="VARDIST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="DIFFUSE"/>
+            <EnumValue Name="INVCHISQ"/>
+            <EnumValue Name="INVGAMMA"/>
+            <EnumValue Name="JEFFREYS2"/>
+            <EnumValue Name="JEFFREYS4"/>
+        </Parameter>
+        <Parameter Name="PRECDIST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="GAMMA"/>
+            <EnumValue Name="CHISQ"/>
+        </Parameter>
+        <Parameter Name="MEANDIST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="DIFFUSE"/>
+            <EnumValue Name="NORMAL"/>
+        </Parameter>
+        <Parameter Name="KAPPA" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="TYPE" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="CONJUGATE"/>
+        </Parameter>
+    </Subcommand>
+</Command>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2020                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 4/28/08 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    Name="CREATE" Language="Syntax" IsArbitrary="No" EndRequired="None">
+    <Subcommand Name="GLOBAL_PARAMS" EqualsSign="None">
+        <Parameter Name="CSUM" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="DIFF" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="FFT" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="IFFT" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="LAG" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="LEAD" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="MA" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="PMA" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="RMED" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="SDIFF" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="T4253H" EqualsSign="Optional" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="SPEC_PARAMS" EqualsSign="None">
+        <Parameter Name="CSUM" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="DIFF" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="FFT" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="IFFT" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="LAG" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="LEAD" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="MA" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="PMA" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="RMED" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="SDIFF" EqualsSign="Optional" ParameterType="Keyword"/>
+        <Parameter Name="T4253H" EqualsSign="Optional" ParameterType="Keyword"/>
+    </Subcommand>
+</Command>

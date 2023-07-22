@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2020                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+
+<Command xmlns="http://xml.spss.com/spss/extension"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+    xmlns:p1="http://xml.spss.com/spss/extension" Name="PROPORTIONS" EndRequired="None"
+    IsArbitrary="No" Language="Syntax">
+  <Subcommand Name="MISSING">
+    <Parameter Name="SCOPE" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="ANALYSIS"/>
+      <EnumValue Name="LISTWISE"/>
+    </Parameter>
+    <Parameter Name="USERMISSING" EqualsSign="Optional" ParameterType="Keyword">
+      <EnumValue Name="EXCLUDE"/>
+      <EnumValue Name="INCLUDE"/>
+    </Parameter>
+  </Subcommand>
+  <Subcommand Name="CRITERIA">
+    <Parameter Name="CILEVEL" EqualsSign="Required" ParameterType="Keyword"/>
+  </Subcommand>
+  <Subcommand Name="SUCCESS" EqualsSign="None">
+    <Parameter Name="VALUE" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="LAST"/>
+      <EnumValue Name="FIRST"/>
+      <EnumValue Name="LEVEL"/>
+      <EnumValue Name="MIDPOINT"/>
+      <EnumValue Name="CUTPOINT"/>
+    </Parameter>
+  </Subcommand>
+  <Subcommand Name="ONESAMPLE">
+    <Parameter Name="TESTVAL" EqualsSign="Required" ParameterType="Keyword"/>
+    <Parameter Name="TESTTYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="EXACT"/>
+      <EnumValue Name="MIDP"/>
+      <EnumValue Name="SCORE"/>
+      <EnumValue Name="SCORECC"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+    <Parameter Name="CITYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="AGRESTI_COULL"/>
+      <EnumValue Name="ANSCOMBE"/>
+      <EnumValue Name="CLOPPER_PEARSON"/>
+      <EnumValue Name="JEFFREYS"/>
+      <EnumValue Name="LOGIT"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="WILSON_SCORE"/>
+      <EnumValue Name="WILSON_SCORECC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+  </Subcommand>
+  <Subcommand Name="PAIREDSAMPLES">
+    <Parameter Name="WITH" EqualsSign="None" ParameterType="Keyword"/>
+    <Parameter Name="PAIRED" EqualsSign="None" ParameterType="Keyword"/>
+    <Parameter Name="TESTTYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="EXACT"/>
+      <EnumValue Name="MIDP"/>
+      <EnumValue Name="MCNEMAR"/>
+      <EnumValue Name="MCNEMARCC"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+    <Parameter Name="CITYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="AGRESTI_MIN"/>
+      <EnumValue Name="BONETT_PRICE"/>
+      <EnumValue Name="NEWCOMBE"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+  </Subcommand>
+  <Subcommand Name="INDEPENDENTSAMPLES">
+    <Parameter Name="BY" EqualsSign="None" ParameterType="Keyword"/>
+    <Parameter Name="SELECT" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="LEVEL"/>
+      <EnumValue Name="MIDPOINT"/>
+      <EnumValue Name="CUTPOINT"/>
+    </Parameter>
+    <Parameter Name="TESTTYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="HAUCK_ANDERSON"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="WALDH0"/>
+      <EnumValue Name="WALDH0CC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+    <Parameter Name="CITYPES" EqualsSign="Required" ParameterType="Keyword">
+      <EnumValue Name="AGRESTI_CAFFO"/>
+      <EnumValue Name="BROWN_LI_JEFFREYS"/>
+      <EnumValue Name="HAUCK_ANDERSON"/>
+      <EnumValue Name="NEWCOMBE"/>
+      <EnumValue Name="NEWCOMBECC"/>
+      <EnumValue Name="WALD"/>
+      <EnumValue Name="WALDCC"/>
+      <EnumValue Name="ALL"/>
+      <EnumValue Name="NONE"/>
+    </Parameter>
+  </Subcommand>
+</Command>

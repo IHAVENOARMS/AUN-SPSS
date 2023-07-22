@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!-- ***************************************************************** -->
+<!--                                                                   -->
+<!-- Licensed Materials - Property of IBM                              -->
+<!--                                                                   -->
+<!-- IBM SPSS Products: Statistics Common                              -->
+<!--                                                                   -->
+<!-- (C) Copyright IBM Corp. 1989, 2019                                -->
+<!--                                                                   -->
+<!-- US Government Users Restricted Rights - Use, duplication or       -->
+<!-- disclosure restricted by GSA ADP Schedule Contract with IBM       -->
+<!-- Corp.                                                             -->
+<!--                                                                   -->
+<!-- ***************************************************************** -->
+
+ <!-- Created 8/15/18 -->
+<Command xmlns="http://xml.spss.com/spss/extension"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://xml.spss.com/spss/extension http://xml.spss.com/spss/extension/SyntaxSchema.xsd"
+ xmlns:p1="http://xml.spss.com/spss/extension"
+ Name="POWER MEANS RELATED"
+ Language="Syntax"
+ EndRequired="None"
+ IsArbitrary="No">
+    <Subcommand Name="PARAMETERS" EqualsSign="None">
+        <Parameter Name="TEST" EqualsSign="Required" ParameterType="Keyword">
+            <EnumValue Name="NONDIRECTIONAL"/>
+            <EnumValue Name="DIRECTIONAL"/>
+        </Parameter>
+        <Parameter Name="SIGNIFICANCE" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="NPAIRS" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="POWER" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="SD" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="RHO" EqualsSign="Required" ParameterType="Keyword"/>
+        <Parameter Name="MEAN" EqualsSign="Required" ParameterType="Keyword"/>
+    </Subcommand>
+    <Subcommand Name="PLOT" EqualsSign="None">
+        <Parameter Name="NPAIRS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="ES" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="NPAIRS_XAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="ES_XAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="NPAIRS_YAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="ES_YAXIS" EqualsSign="None" ParameterType="Keyword"/>
+        <!--<Parameter Name="TOOLTIP" EqualsSign="None" ParameterType="Keyword">
+            <EnumValue Name="FALSE"/>
+            <EnumValue Name="TRUE"/>
+        </Parameter>-->
+        <Parameter Name="VROTATE" EqualsSign="None" ParameterType="Keyword"/>
+        <Parameter Name="HROTATE" EqualsSign="None" ParameterType="Keyword"/>
+    </Subcommand>
+</Command>

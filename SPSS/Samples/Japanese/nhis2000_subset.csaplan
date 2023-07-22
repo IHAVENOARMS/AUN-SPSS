@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE SPSSComplexSamples SYSTEM "http://xml.spss.com/spss/complex-samples/spss-complex-samples-1.0.dtd">
+<SPSSComplexSamples version="1.0">
+	<Header copyright="Copyright (c) SPSS Inc., 2004. All Rights Reserved."/>
+	<AnalysisDesign numberOfStages="1">
+		<AnalysisStage estimationMethod="wr" stageNumber="1">
+			<StrataVarList numberOfVariables="1">
+				<Variable name="ｽﾄﾗｰﾀ"/>
+			</StrataVarList>
+			<ClusterVarList numberOfVariables="1">
+				<Variable name="PSU"/>
+			</ClusterVarList>
+		</AnalysisStage>
+		<Weight>
+			<Variable name="WTFA_SA"/>
+		</Weight>
+	</AnalysisDesign>
+</SPSSComplexSamples>

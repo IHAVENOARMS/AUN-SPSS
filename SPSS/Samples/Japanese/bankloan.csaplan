@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE SPSSComplexSamples SYSTEM "http://xml.spss.com/spss/complex-samples/spss-complex-samples-1.0.dtd">
+<SPSSComplexSamples version="1.0">
+	<Header copyright="Copyright (c) SPSS Inc., 2004. All Rights Reserved."/>
+	<AnalysisDesign numberOfStages="2">
+		<AnalysisStage estimationMethod="equal_wor" stageNumber="1">
+			<ClusterVarList numberOfVariables="1">
+				<Variable name="支店"/>
+			</ClusterVarList>
+			<IncProb>
+				<Variable name="包含確率_s1"/>
+			</IncProb>
+		</AnalysisStage>
+		<AnalysisStage estimationMethod="equal_wor" stageNumber="2">
+			<IncProb>
+				<Variable name="包含確率_s2"/>
+			</IncProb>
+		</AnalysisStage>
+		<Weight>
+			<Variable name="最終重み"/>
+		</Weight>
+	</AnalysisDesign>
+</SPSSComplexSamples>

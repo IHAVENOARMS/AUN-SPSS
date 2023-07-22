@@ -1,0 +1,18 @@
+[Language]
+SPSSLanguage=de
+[Product]
+VersionMajor=27
+VersionMinor=0 
+PreferencesRoot=Statistics Output Viewer
+FeatureCode=9620
+FixPack=0
+CommonRoot=I:\IBM SPSS\common
+Version=27.0.1.0
+VersionPatch=1 
+LicenseDescription= 
+CustomerName=youseffgamal123@gmail.com
+DaemonHost=no-net
+CodePage=65001
+Organization= 
+ProductName=IBM SPSS Statistics Output Viewer 27
+ProductNickName=SPSS Statistics Output Viewer 

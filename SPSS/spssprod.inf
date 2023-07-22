@@ -1,0 +1,21 @@
+[Product]
+LicenseDescription= 
+FixPack=0
+CustomerName=youseffgamal123@gmail.com
+KCURL=https://www.ibm.com/support/knowledgecenter/SSLVMB_27.0.0
+VersionPatch=1 
+Organization= 
+ProductName=IBM SPSS Statistics 27
+ProductNickName=IBM SPSS Statistics 
+RegistryRoot=SPSS Statistics\27 
+CommonRoot=I:\IBM SPSS\common
+Version=27.0.1.0
+VersionMajor=27
+VersionMinor=0 
+StartJVMAtStartup=no
+DaemonHost=no-net 
+FeatureCode=1200
+PreferencesRoot=Statistics
+CodePage=65001
+Copyright=Copyright (c) IBM Corp. 1989, 2017.
+CommuterMaxLife=7
